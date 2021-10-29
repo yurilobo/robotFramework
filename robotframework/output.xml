@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.1.2 (Python 3.10.0 on win32)" generated="20211027 14:22:17.130" rpa="false" schemaversion="2">
+<suite id="s1" name="MeuTeste" source="C:\Users\yuri.sousa\Desktop\robot\robotframework\MeuTeste.robot">
+<test id="s1-t1" name="Caso numero 1">
+<kw name="Minha primeira Keyword" library="MeuResource">
+<kw name="Log To Console" library="BuiltIn">
+<arg>${\n} Oba executei meu teste com Robot</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20211027 14:22:17.151" endtime="20211027 14:22:17.151"/>
+</kw>
+<status status="PASS" starttime="20211027 14:22:17.151" endtime="20211027 14:22:17.151"/>
+</kw>
+<status status="PASS" starttime="20211027 14:22:17.151" endtime="20211027 14:22:17.151"/>
+</test>
+<status status="PASS" starttime="20211027 14:22:17.132" endtime="20211027 14:22:17.151"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="MeuTeste">MeuTeste</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

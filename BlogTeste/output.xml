@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.1.2 (Python 3.10.0 on win32)" generated="20211027 17:29:17.884" rpa="false" schemaversion="2">
+<suite id="s1" name="TesteBlogTest" source="C:\Users\yuri.sousa\Desktop\robot\BlogTeste\TesteBlogTest.robot">
+<test id="s1-t1" name="Caso de Teste 01: Pesquisar um post">
+<kw name="Acessar a página do ResourceBlogTest" library="ResourceBlogTest">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>url= ${URL}</arg>
+<arg>browser= ${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20211027 17:29:18.062" level="INFO">Opening browser ' chrome' to base url ' http://robotizandotestes.blogspot.com/'.</msg>
+<status status="PASS" starttime="20211027 17:29:18.062" endtime="20211027 17:29:23.514"/>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>Robotizando Testes</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20211027 17:29:23.517" level="INFO">Page title is 'Robotizando Testes'.</msg>
+<status status="PASS" starttime="20211027 17:29:23.514" endtime="20211027 17:29:23.517"/>
+</kw>
+<status status="PASS" starttime="20211027 17:29:18.062" endtime="20211027 17:29:23.517"/>
+</kw>
+<kw name="Pesquisar por um post com &quot;Season Premiere: Introdução ao Robot Framework&quot;" library="ResourceBlogTest">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${BTN_PESQUISA}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20211027 17:29:23.524" level="INFO">Clicking button 'css=button.search-expand.touch-icon-button'.</msg>
+<status status="PASS" starttime="20211027 17:29:23.524" endtime="20211027 17:29:23.611"/>
+</kw>
+<status status="PASS" starttime="20211027 17:29:23.524" endtime="20211027 17:29:23.611"/>
+</kw>
+<status status="PASS" starttime="20211027 17:29:18.062" endtime="20211027 17:29:23.613"/>
+</test>
+<status status="PASS" starttime="20211027 17:29:17.889" endtime="20211027 17:29:23.614"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="TesteBlogTest">TesteBlogTest</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
