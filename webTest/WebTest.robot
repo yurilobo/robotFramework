@@ -2,7 +2,7 @@
 Documentation    Suíte de Testes WEB - Site: http://automationpractice.com
 Resource         resourceWebTest.robot
 Suite Setup      Abrir o Navegador
-Suite Teardown   Fechar o Navegador
+#Suite Teardown   Fechar o Navegador
 
 *** Test Cases ***
 Caso de Teste 01: Pesquisar produto existente e adicioná-lo no carrinho
@@ -24,3 +24,13 @@ Caso de Teste 03: Listar Produtos
     Passar o mouse por cima da categoria "Women" no menu principal superior de categorias
     Clicar na sub categoria "Summer Dresses"
     Conferir se os produtos da sub-categoria "Summer Dresses" foram mostrados na página
+
+Caso de Teste 04: Adicionar Cliente
+    Acessar a página home do site Automation Practice
+    Clicar em "Sign in"
+    Informar um E-mail "yuri7@teste.com"
+    #Mudar o email
+    Clicar em "Create an account"
+    Preencher os dados obrigatórios
+    Submeter cadastro
+   
