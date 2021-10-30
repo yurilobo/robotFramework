@@ -8,7 +8,7 @@ ${URL}    http://automationpractice.com
 ## ---- SETUP
 Abrir o Navegador
     Open Browser    browser=chrome
-
+ 
 ## ---- TEARDOWN
 Fechar o Navegador
     Close Browser 
@@ -31,3 +31,5 @@ Adicionar o produto "${PRODUTO}" no carrinho
 
 Conferir se o produto "${PRODUTO}" foi adicionado no carrinho
     Wait Until Element Is Visible    xpath=(//a[contains(.,'${PRODUTO}')])[4]
+Conferir mensagem "No results were found for your search "itemNãoExistente""
+    Wait Until Element Is Visible    xpath=//p[@class='alert alert-warning'][contains(.,'No results were found for your search "itemNãoExistente"')]
