@@ -33,3 +33,12 @@ Conferir se o produto "${PRODUTO}" foi adicionado no carrinho
     Wait Until Element Is Visible    xpath=(//a[contains(.,'${PRODUTO}')])[4]
 Conferir mensagem "No results were found for your search "itemNãoExistente""
     Wait Until Element Is Visible    xpath=//p[contains(.,'No results were found for your search "itemNãoExistente"')]
+Passar o mouse por cima da categoria "${CATEGORIA}" no menu principal superior de categorias 
+    Mouse Over       xpath=//a[contains(@title,'Women')]  
+
+Clicar na sub categoria "${CATEGORIA}"
+    Mouse Over       xpath=(//a[@title='Summer Dresses'])[1]
+    Click Element    xpath=(//a[@title='Summer Dresses'])[1]
+
+Conferir se os produtos da sub-categoria "${SUBCATEGORIA}" foram mostrados na página
+    Wait Until Element Is Visible    xpath=//span[@class='cat-name'][contains(.,'${SUBCATEGORIA}')]
