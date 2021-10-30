@@ -3,6 +3,7 @@ Resource  ResourceBlogTest.robot
 Test Setup  Acessar a página do blog
 Test Teardown    Fechar navegador
 
+
 *** Test Cases ***
 Caso de Teste 01: Pesquisar um post
     Pesquisar por um post com "Season Premiere: Introdução ao Robot Framework"
