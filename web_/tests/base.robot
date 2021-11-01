@@ -9,5 +9,6 @@ ${BROWSER}    chrome
 Nova sessão
     Open Browser    ${URL}      ${BROWSER}
 
-Fechar sessão    
+Fechar sessão  
+    Capture Page Screenshot  
     Close Browser
