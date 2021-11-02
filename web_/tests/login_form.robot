@@ -2,36 +2,44 @@
 Resource    base.robot
 Test Setup    Nova sessão    
 Test Teardown    Fechar sessão
-Library    XML
+
 
 *** Test Cases ***
 Login com Sucesso
     Go To                         ${URL}/login
-    Input Text     css:input[name=username]    stark
-    Input Text     css:input[name=password]    jarvis!
-    Click Element  class:btn-login
+    Login with     stark    jarvis!
 
-    Page Should Contain    Olá, Tony Stark. Você acessou a área logada!
+    Should see loger user       Tony Stark
 
 Senha Invalida
     [tags]    login_error
     Go To                         ${URL}/login
-    Input Text     css:input[name=username]    stark
-    Input Text     css:input[name=password]    aeer4
-    Click Element  class:btn-login
-
-    ${message}=     Get WebElement    id:flash
-
-    Should Contain     ${message.text}   Senha é invalida!
+    Login with    stark    aeer4
+    
+    Should contain login alert   Senha é invalida!
 
     
 Usuário não existente
     [tags]    login_user404
     Go To                         ${URL}/login
-    Input Text     css:input[name=username]    sqwno
-    Input Text     css:input[name=password]    aeer4
+    Login with    sqwno    aeer4
+    Should contain login alert   O usuário informado não está cadastrado!
+
+*** Keywords ***
+Login with
+    [Arguments]    ${uname}    ${pass}
+    
+    Input Text     css:input[name=username]    ${uname}
+    Input Text     css:input[name=password]    ${pass}
     Click Element  class:btn-login
 
-    ${message}=     Get WebElement    id:flash
+Should contain login alert
+    [Arguments]    ${expext_message}  
 
-    Should Contain     ${message.text}   O usuário informado não está cadastrado!
+    ${message}=    Get WebElement     id:flash
+    Should Contain     ${message.text}     ${expext_message} 
+
+Should see loger user
+    [Arguments]    ${full_name}
+
+    Page Should Contain    Olá, ${full_name}.    Você acessou a área logada!
